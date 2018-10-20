@@ -15,18 +15,18 @@ namespace Aufgabe01
 
                 if (arabic >= 0 && arabic <= 999 )
                 {
-                Console.WriteLine(GetRomanNumber(arabic));               
+                     Console.WriteLine(GetRomanNumber(arabic));               
                 }
 
                 else
                 {
-                Console.WriteLine("Outside the value range");           
+                    Console.WriteLine("Outside the value range");           
                 }
             }
 
             catch
             {
-                Console.WriteLine("Only numbers");
+                Console.WriteLine("Allow only integer numbers ");
             }
         }
 
