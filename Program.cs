@@ -8,22 +8,31 @@ namespace Softwaredesign
     {
         static void Main(string[] args)
         { 
-            int value = Convert.ToInt32(args[0]);             
 
-            if ((value <= 0) || (value > 999) )
+            try
             {
-            Console.WriteLine("Eingabe ausserhalb des Wertebereichs!!!");   
+                int value = Convert.ToInt32(args[0]);             
+
+                if (value >= 0 && value <= 999 )
+                {
+                Console.WriteLine(GetRomanNumber(value));               
+                }
+
+                else
+                {
+                Console.WriteLine("Eingabe ausserhalb des Wertebereichs!!!");           
+                }
             }
-
-            else
+            
+            catch
             {
-            Console.WriteLine(GetRomanNumber(value));
+                Console.WriteLine("Wrong input only numbers");
             }
         }
 
 public static string GetRomanNumber(int value)
 {
-     if ((value < 1) || (value >= Int32.MaxValue)) { return ""; }
+   
      string res = "";
  
       if (value >= 900) { value -= 900; res += "CM"; }
