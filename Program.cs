@@ -11,11 +11,11 @@ namespace Softwaredesign
 
             try
             {
-                int arb = Convert.ToInt32(args[0]);             
+                int arabic = Convert.ToInt32(args[0]);             
 
-                if (arb >= 0 && arb <= 999 )
+                if (arabic >= 0 && arabic <= 999 )
                 {
-                Console.WriteLine(GetRomanNumber(arb));               
+                Console.WriteLine(GetRomanNumber(arabic));               
                 }
 
                 else
