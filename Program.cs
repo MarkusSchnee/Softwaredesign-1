@@ -11,22 +11,22 @@ namespace Softwaredesign
 
             try
             {
-                int value = Convert.ToInt32(args[0]);             
+                int arb = Convert.ToInt32(args[0]);             
 
-                if (value >= 0 && value <= 999 )
+                if (arb >= 0 && arb <= 999 )
                 {
-                Console.WriteLine(GetRomanNumber(value));               
+                Console.WriteLine(GetRomanNumber(arb));               
                 }
 
                 else
                 {
-                Console.WriteLine("Eingabe ausserhalb des Wertebereichs!!!");           
+                Console.WriteLine("Outside the value range");           
                 }
             }
-            
+
             catch
             {
-                Console.WriteLine("Wrong input only numbers");
+                Console.WriteLine("Only numbers");
             }
         }
 
