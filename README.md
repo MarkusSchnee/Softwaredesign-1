@@ -1,5 +1,4 @@
 # Softwaredesign
 **Hallo world :)**
-** blub**
-Test
+Aufgabe 1 erster Versuch online
 

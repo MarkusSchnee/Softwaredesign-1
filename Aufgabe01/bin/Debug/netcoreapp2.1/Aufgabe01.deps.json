@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "Softwaredesign/1.0.0": {
+      "Aufgabe01/1.0.0": {
         "runtime": {
-          "Softwaredesign.dll": {}
+          "Aufgabe01.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Softwaredesign/1.0.0": {
+    "Aufgabe01/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
