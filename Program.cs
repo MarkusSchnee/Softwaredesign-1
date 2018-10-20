@@ -30,31 +30,48 @@ namespace Softwaredesign
             }
         }
 
-public static string GetRomanNumber(int value)
+public static string GetRomanNumber(int arabic)
 {
    
-     string res = "";
+     string roman = "";
  
-      if (value >= 900) { value -= 900; res += "CM"; }
+      if (arabic >= 900) 
+      { arabic -= 900; roman += "CM"; }
  
-      while (value >= 500) { value -= 500; res += "D"; }
-      if (value >= 400) { value -= 400; res += "CD"; }
+      while (arabic >= 500)
+      { arabic -= 500; roman += "D"; }
+      
+      if (arabic >= 400) 
+      { arabic -= 400; roman += "CD"; }
  
-      while (value >= 100) { value -= 100; res += "C"; }
-      if (value >= 90) { value -= 90; res += "XC"; }
+      while(arabic >= 100) 
+      { arabic -= 100; roman += "C"; }
+      
+      if (arabic >= 90) 
+      { arabic -= 90; roman += "XC"; }
  
-      while (value >= 50) { value -= 50; res += "L"; }
-      if (value >= 40) { value -= 40; res += "XL"; }
+      while (arabic >= 50) 
+      { arabic -= 50; roman += "L"; }
+      
+      if(arabic >= 40)
+      { arabic -= 40; roman += "XL"; }
  
-      while (value >= 10) { value -= 10; res += "X"; }
-      if (value >= 9) { value -= 9; res += "IX"; }
+      while (arabic >= 10) 
+      { arabic -= 10; roman += "X"; }
+      
+      if (arabic >= 9) 
+      { arabic -= 9; roman += "IX"; }
  
-      while (value >= 5) { value -= 5; res += "V"; }
-      if (value >= 4) { value -= 4; res += "IV"; }
+      while (arabic >= 5) 
+      { arabic -= 5; roman += "V"; }
+      
+      if (arabic >= 4)
+      { arabic -= 4; roman += "IV"; }
  
-      while (value >= 1) { value -= 1; res += "I"; }
+      while (arabic >= 1) 
+      { arabic -= 1; roman += "I"; }
  
-      return res;
+      return roman;
 
  }
     }
