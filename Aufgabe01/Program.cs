@@ -31,45 +31,56 @@ namespace Aufgabe01
         }
 
 public static string GetRomanNumber(int arabic)
-{
-   
+{   
      string roman = "";
  
       if (arabic >= 900) 
-      { arabic -= 900; roman += "CM"; }
+      { arabic -= 900;
+        roman += "CM";}
  
       while (arabic >= 500)
-      { arabic -= 500; roman += "D"; }
+      { arabic -= 500;
+       roman += "D"; }
       
       if (arabic >= 400) 
-      { arabic -= 400; roman += "CD"; }
+      { arabic -= 400;
+       roman += "CD"; }
  
       while(arabic >= 100) 
-      { arabic -= 100; roman += "C"; }
+      { arabic -= 100;
+       roman += "C"; }
       
       if (arabic >= 90) 
-      { arabic -= 90; roman += "XC"; }
+      { arabic -= 90;
+       roman += "XC"; }
  
       while (arabic >= 50) 
-      { arabic -= 50; roman += "L"; }
+      { arabic -= 50;
+       roman += "L"; }
       
       if(arabic >= 40)
-      { arabic -= 40; roman += "XL"; }
+      { arabic -= 40;
+       roman += "XL"; }
  
       while (arabic >= 10) 
-      { arabic -= 10; roman += "X"; }
+      { arabic -= 10;
+       roman += "X"; }
       
       if (arabic >= 9) 
-      { arabic -= 9; roman += "IX"; }
+      { arabic -= 9;
+       roman += "IX"; }
  
       while (arabic >= 5) 
-      { arabic -= 5; roman += "V"; }
+      { arabic -= 5;
+       roman += "V"; }
       
       if (arabic >= 4)
-      { arabic -= 4; roman += "IV"; }
+      { arabic -= 4;
+       roman += "IV"; }
  
       while (arabic >= 1) 
-      { arabic -= 1; roman += "I"; }
+      { arabic -= 1;
+       roman += "I"; }
  
       return roman;
 
