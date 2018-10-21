@@ -12,7 +12,7 @@ namespace Aufgabe01
             {
                 int arabic = Convert.ToInt32(args[0]);             
 
-                if (arabic >= 0 && arabic <= 3999 )
+                if (arabic >= 1 && arabic <= 3999 )
                 {
                      Console.WriteLine(GetRomanNumber(arabic));               
                 }
