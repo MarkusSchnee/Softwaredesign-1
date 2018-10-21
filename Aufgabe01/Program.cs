@@ -37,7 +37,7 @@ public static string GetRomanNumber(int arabic)
       { arabic -= 900;
         roman += "CM";}
  
-      while (arabic >= 500)
+      if (arabic >= 500)
       { arabic -= 500;
        roman += "D"; }
       
@@ -53,7 +53,7 @@ public static string GetRomanNumber(int arabic)
       { arabic -= 90;
        roman += "XC"; }
  
-      while (arabic >= 50) 
+      if (arabic >= 50) 
       { arabic -= 50;
        roman += "L"; }
       
@@ -69,7 +69,7 @@ public static string GetRomanNumber(int arabic)
       { arabic -= 9;
        roman += "IX"; }
  
-      while (arabic >= 5) 
+      if (arabic >= 5) 
       { arabic -= 5;
        roman += "V"; }
       
