@@ -1,4 +1,3 @@
 # Softwaredesign
 
-Aufgabe 1 erster Versuch online
-
+Aufgabe 1 online
