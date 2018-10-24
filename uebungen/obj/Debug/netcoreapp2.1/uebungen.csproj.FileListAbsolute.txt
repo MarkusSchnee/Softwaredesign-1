@@ -1,0 +1,11 @@
+Z:\git\Softwaredesign\uebungen\bin\Debug\netcoreapp2.1\uebungen.deps.json
+Z:\git\Softwaredesign\uebungen\bin\Debug\netcoreapp2.1\uebungen.runtimeconfig.json
+Z:\git\Softwaredesign\uebungen\bin\Debug\netcoreapp2.1\uebungen.runtimeconfig.dev.json
+Z:\git\Softwaredesign\uebungen\bin\Debug\netcoreapp2.1\uebungen.dll
+Z:\git\Softwaredesign\uebungen\bin\Debug\netcoreapp2.1\uebungen.pdb
+Z:\git\Softwaredesign\uebungen\obj\Debug\netcoreapp2.1\uebungen.csprojAssemblyReference.cache
+Z:\git\Softwaredesign\uebungen\obj\Debug\netcoreapp2.1\uebungen.csproj.CoreCompileInputs.cache
+Z:\git\Softwaredesign\uebungen\obj\Debug\netcoreapp2.1\uebungen.AssemblyInfoInputs.cache
+Z:\git\Softwaredesign\uebungen\obj\Debug\netcoreapp2.1\uebungen.AssemblyInfo.cs
+Z:\git\Softwaredesign\uebungen\obj\Debug\netcoreapp2.1\uebungen.dll
+Z:\git\Softwaredesign\uebungen\obj\Debug\netcoreapp2.1\uebungen.pdb

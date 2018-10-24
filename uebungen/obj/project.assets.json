@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\git\\Softwaredesign\\aufgabe01\\Aufgabe01.csproj",
-      "projectName": "Aufgabe01",
-      "projectPath": "Z:\\git\\Softwaredesign\\aufgabe01\\Aufgabe01.csproj",
+      "projectUniqueName": "Z:\\git\\Softwaredesign\\uebungen\\uebungen.csproj",
+      "projectName": "uebungen",
+      "projectPath": "Z:\\git\\Softwaredesign\\uebungen\\uebungen.csproj",
       "packagesPath": "C:\\Users\\latochac\\.nuget\\packages\\",
-      "outputPath": "Z:\\git\\Softwaredesign\\aufgabe01\\obj\\",
+      "outputPath": "Z:\\git\\Softwaredesign\\uebungen\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

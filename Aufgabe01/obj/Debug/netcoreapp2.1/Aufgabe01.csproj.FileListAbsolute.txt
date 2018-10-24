@@ -9,3 +9,14 @@ C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe01\obj\Debug\netcoreapp2.1\Auf
 C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe01\obj\Debug\netcoreapp2.1\Aufgabe01.AssemblyInfo.cs
 C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe01\obj\Debug\netcoreapp2.1\Aufgabe01.dll
 C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe01\obj\Debug\netcoreapp2.1\Aufgabe01.pdb
+Z:\git\Softwaredesign\aufgabe01\bin\Debug\netcoreapp2.1\Aufgabe01.deps.json
+Z:\git\Softwaredesign\aufgabe01\bin\Debug\netcoreapp2.1\Aufgabe01.runtimeconfig.json
+Z:\git\Softwaredesign\aufgabe01\bin\Debug\netcoreapp2.1\Aufgabe01.runtimeconfig.dev.json
+Z:\git\Softwaredesign\aufgabe01\bin\Debug\netcoreapp2.1\Aufgabe01.dll
+Z:\git\Softwaredesign\aufgabe01\bin\Debug\netcoreapp2.1\Aufgabe01.pdb
+Z:\git\Softwaredesign\aufgabe01\obj\Debug\netcoreapp2.1\Aufgabe01.csprojAssemblyReference.cache
+Z:\git\Softwaredesign\aufgabe01\obj\Debug\netcoreapp2.1\Aufgabe01.csproj.CoreCompileInputs.cache
+Z:\git\Softwaredesign\aufgabe01\obj\Debug\netcoreapp2.1\Aufgabe01.AssemblyInfoInputs.cache
+Z:\git\Softwaredesign\aufgabe01\obj\Debug\netcoreapp2.1\Aufgabe01.AssemblyInfo.cs
+Z:\git\Softwaredesign\aufgabe01\obj\Debug\netcoreapp2.1\Aufgabe01.dll
+Z:\git\Softwaredesign\aufgabe01\obj\Debug\netcoreapp2.1\Aufgabe01.pdb
