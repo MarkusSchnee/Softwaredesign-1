@@ -11,6 +11,7 @@ namespace uebungen
             Arrays();
             Strings();
             Verzweigungen();
+            switch_case();
         }
 
     public static void Initialisierung()
@@ -75,8 +76,8 @@ namespace uebungen
             Console.WriteLine(a_eq_c);
             Console.WriteLine(zeichen);        
 }
-   public static void Verzweigungen(){
-            
+   public static void Verzweigungen()
+   {
             Console.WriteLine("Teil Verzweigungen");           
             Console.WriteLine("Gib eine Zahl für A ein:");
             int A = int.Parse(Console.ReadLine());
@@ -96,6 +97,29 @@ namespace uebungen
             }
 }
    
+        public static void switch_case()
+        {
+        Console.WriteLine("Tief im Wald kommst du auf eine Kreuzung. Es gibt zwei Wege. Aus dem Linken hörst du ein Sägen. Aus dem Rechten ein Schleifen.  ");
+        Console.WriteLine("Welchen Weg nimmst du. Den Linken, den Rechten oder Zurück?");
+        string richtung = Console.ReadLine();
+        switch (richtung)
+        {
+            case "Linken":
+                Console.WriteLine("Du wurdest von einem Baum erschlagen");
+                break;
+            case "Rechten":
+                Console.WriteLine("Du wurdest von einer Axt erschlagen");
+                break;
+            case "Zurück":
+                Console.WriteLine("DU hast dich verlaufen und wurdest von den Wölfen gefressen.");
+                break;
+            default:
+                Console.WriteLine("Du konntest dich nicht entscheiden und bist verhungert.");
+                break;
+        } 
+        //Es kommt ein fehler     !
+        }
+
    
     }
 }
