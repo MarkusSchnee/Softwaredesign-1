@@ -12,6 +12,7 @@ namespace uebungen
             Strings();
             Verzweigungen();
             switch_case();
+            Schleifen();
         }
 
     public static void Initialisierung()
@@ -118,6 +119,65 @@ namespace uebungen
                 break;
         } 
         //Es kommt ein fehler     !
+        }
+
+        public static void Schleifen()
+        {
+             Console.WriteLine("Teil Schleifen");
+
+            int i = 0;//Initialisierung
+            while(i<10)//Bedingung
+            {
+                i++;//Inkrement
+                Console.Write(i+" ");
+            }
+             Console.WriteLine();
+
+            string[] someStrings = 
+            {
+                "Hier",
+                "sehen",
+                "wir",          
+                "einen",
+                "Array",
+                "von",
+                "Strings",
+            }; 
+           for (int i2 = 0; i2 < 5; i2++)                {
+             Console.Write(someStrings[i2] + " ");
+             }
+
+            Console.WriteLine();
+            int i3 = 0;
+            while(i3<someStrings.Length)
+            {
+                Console.Write(someStrings[i3] + " ");
+             i3++;
+            }
+
+
+            Console.WriteLine();
+            int j = 0;
+            do 
+            {
+                Console.WriteLine(someStrings[j]);
+                j++;
+            }
+            while (j<someStrings.Length);
+
+
+            Console.WriteLine();
+            int k = 0;
+            while (true)
+            {
+                Console.WriteLine(someStrings[k]);
+                if (k>=someStrings.Length-1)
+                break;
+                k++;
+            }
+
+//wenn keine Einträge vorhanden: Unhandled Exception: System.IndexOutOfRangeException: Index was outside the bounds of the array.
+
         }
 
    
