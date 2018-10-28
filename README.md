@@ -1,3 +1,3 @@
 # Softwaredesign
 
-Aufgabe 1 online
+L02_ProgrammierenInC#_1 online
