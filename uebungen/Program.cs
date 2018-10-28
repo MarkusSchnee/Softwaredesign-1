@@ -9,6 +9,8 @@ namespace uebungen
             Initialisierung();
             Inferenz();
             Arrays();
+            Strings();
+            Verzweigungen();
         }
 
     public static void Initialisierung()
@@ -46,7 +48,6 @@ namespace uebungen
         int ergebnis = ia[2] * ia[8] + ia[4];
         Console.WriteLine("Teil Arrays");
         Console.WriteLine(ergebnis);
-
         double[] importantnumbers = {3.14,  2.71, 2.97*(10^-19)};
         Console.WriteLine(importantnumbers[0]);
         Console.WriteLine(importantnumbers[1]);
@@ -54,7 +55,46 @@ namespace uebungen
         Console.WriteLine(ia.Length);
         }     
    
-   
+   public static void Strings()
+   {
+            //string meinString = "Dies ist ein String"; 
+            //string a = "Dies ist ";
+            //string b = "ein String";
+            //string c = a + b; 
+            Console.WriteLine("Teil Strings");          
+            string a = "eins";
+            string b = "zwei";
+            string c = "eins";
+            bool a_eq_b = (a == b);
+            bool a_eq_c = (a == c);   
+            string meinString = "Dies ist ein String";          
+            char zeichen = meinString[5];            
+            Console.WriteLine(meinString);
+            Console.WriteLine(c);
+            Console.WriteLine(a_eq_b);
+            Console.WriteLine(a_eq_c);
+            Console.WriteLine(zeichen);        
+}
+   public static void Verzweigungen(){
+            
+            Console.WriteLine("Teil Verzweigungen");           
+            Console.WriteLine("Gib eine Zahl für A ein:");
+            int A = int.Parse(Console.ReadLine());
+            Console.WriteLine("Gib eine Zahl für B ein:");
+            int B = int.Parse(Console.ReadLine());
+            if (A > B){
+                Console.WriteLine("a ist größer als b");
+            }
+            else{
+                Console.WriteLine("b ist größer als a");
+            }
+            if (A > 3 && B == 6){
+                Console.WriteLine("Du hast gewonnen");
+            }
+            else{
+                Console.WriteLine("Leider verloren");
+            }
+}
    
    
     }
