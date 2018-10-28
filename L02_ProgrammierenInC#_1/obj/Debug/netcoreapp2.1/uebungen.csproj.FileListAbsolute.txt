@@ -20,3 +20,14 @@ C:\Users\Chrisi\Desktop\git\Softwaredesign\uebungen\obj\Debug\netcoreapp2.1\uebu
 C:\Users\Chrisi\Desktop\git\Softwaredesign\uebungen\obj\Debug\netcoreapp2.1\uebungen.AssemblyInfo.cs
 C:\Users\Chrisi\Desktop\git\Softwaredesign\uebungen\obj\Debug\netcoreapp2.1\uebungen.dll
 C:\Users\Chrisi\Desktop\git\Softwaredesign\uebungen\obj\Debug\netcoreapp2.1\uebungen.pdb
+C:\Users\Chrisi\Desktop\git\Softwaredesign\L02_ProgrammierenInC#_1\bin\Debug\netcoreapp2.1\uebungen.deps.json
+C:\Users\Chrisi\Desktop\git\Softwaredesign\L02_ProgrammierenInC#_1\bin\Debug\netcoreapp2.1\uebungen.runtimeconfig.json
+C:\Users\Chrisi\Desktop\git\Softwaredesign\L02_ProgrammierenInC#_1\bin\Debug\netcoreapp2.1\uebungen.runtimeconfig.dev.json
+C:\Users\Chrisi\Desktop\git\Softwaredesign\L02_ProgrammierenInC#_1\bin\Debug\netcoreapp2.1\uebungen.dll
+C:\Users\Chrisi\Desktop\git\Softwaredesign\L02_ProgrammierenInC#_1\bin\Debug\netcoreapp2.1\uebungen.pdb
+C:\Users\Chrisi\Desktop\git\Softwaredesign\L02_ProgrammierenInC#_1\obj\Debug\netcoreapp2.1\uebungen.csprojAssemblyReference.cache
+C:\Users\Chrisi\Desktop\git\Softwaredesign\L02_ProgrammierenInC#_1\obj\Debug\netcoreapp2.1\uebungen.csproj.CoreCompileInputs.cache
+C:\Users\Chrisi\Desktop\git\Softwaredesign\L02_ProgrammierenInC#_1\obj\Debug\netcoreapp2.1\uebungen.AssemblyInfoInputs.cache
+C:\Users\Chrisi\Desktop\git\Softwaredesign\L02_ProgrammierenInC#_1\obj\Debug\netcoreapp2.1\uebungen.AssemblyInfo.cs
+C:\Users\Chrisi\Desktop\git\Softwaredesign\L02_ProgrammierenInC#_1\obj\Debug\netcoreapp2.1\uebungen.dll
+C:\Users\Chrisi\Desktop\git\Softwaredesign\L02_ProgrammierenInC#_1\obj\Debug\netcoreapp2.1\uebungen.pdb

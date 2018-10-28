@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\uebungen\\uebungen.csproj",
+      "projectUniqueName": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\L02_ProgrammierenInC#_1\\uebungen.csproj",
       "projectName": "uebungen",
-      "projectPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\uebungen\\uebungen.csproj",
+      "projectPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\L02_ProgrammierenInC#_1\\uebungen.csproj",
       "packagesPath": "C:\\Users\\Chrisi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\uebungen\\obj\\",
+      "outputPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\L02_ProgrammierenInC#_1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
