@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\Aufgabe01\\Aufgabe01.csproj",
-      "projectName": "Aufgabe01",
-      "projectPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\Aufgabe01\\Aufgabe01.csproj",
+      "projectUniqueName": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\uebungen\\uebungen.csproj",
+      "projectName": "uebungen",
+      "projectPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\uebungen\\uebungen.csproj",
       "packagesPath": "C:\\Users\\Chrisi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\Aufgabe01\\obj\\",
+      "outputPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\uebungen\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -732,13 +732,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem beim Lesen der Cachedatei \"C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\Aufgabe01\\obj\\Aufgabe01.csproj.nuget.cache\": Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
