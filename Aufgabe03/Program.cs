@@ -29,6 +29,11 @@ namespace aufgabe03
                     result = DecimalToOther(number, toSystem);                   
                 }
 
+                else if (toSystem==10)
+                {
+                    result = OtherToDecimal(number, fromSystem);
+                }
+
                 else
                 {                 
                     result = OtherToDecimal(number, fromSystem);
