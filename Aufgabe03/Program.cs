@@ -6,21 +6,34 @@ namespace aufgabe03
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Gib eine Zahl die umgerechnet werden soll");
+            try{
+            Console.WriteLine("Welche Zahl soll umgerechnet werden?");
             int number = int.Parse(Console.ReadLine());
-            Console.WriteLine("auswelchem zahlensystem stammt die zahl? Bitte als zahl eingeben. (z.B. aus dem Dezimal ist es eine 10)");
+            Console.WriteLine("auswelchem zahlensystem stammt die zahl? Bitte als zahl eingeben. (z.B. Dezimal ist es eine 10)");
             int fromSystem = int.Parse(Console.ReadLine());
-            Console.WriteLine("in welches zahlensystem soll umgerechnet werden? Bitte als zahl eingeben. (z.B. aus dem Dezimal ist es eine 10)");
+            Console.WriteLine("in welches zahlensystem soll umgerechnet werden? Bitte als zahl eingeben. (z.B. Binär ist eine 2)");
             int toSystem = int.Parse(Console.ReadLine());       
             Console.WriteLine("Das Ergebnis ist: " + ConvertNumberFromSystemToSystem(number, fromSystem, toSystem));
-            
+            }
+            catch
+            {
+              Console.WriteLine("bitte eine gültige zahl eingeben");  
+            }
         }
 
          static int ConvertNumberFromSystemToSystem(int number, int fromSystem, int toSystem)
             {
                 int result = 0;
-                result = OtherToDecimal(number, fromSystem);
-                result = DecimalToOther(result, toSystem);
+                if(fromSystem==10)
+                {                   
+                    result = DecimalToOther(number, toSystem);                   
+                }
+
+                else
+                {                 
+                    result = OtherToDecimal(number, fromSystem);
+                    result = DecimalToOther(result, toSystem);                   
+                }
                 return result;
             }
 
