@@ -11,6 +11,10 @@ namespace Debugging
 
         public Person Mom;
         public Person Dad;
+         public override string ToString()
+    {
+        return "Person: " + FirstName + " " + LastName + " " + "Geburtstag: " + DateOfBirth;
+    }
     }
 
 
@@ -19,7 +23,10 @@ namespace Debugging
         public static Person Find(Person person)
         {
             Person ret = null;
-            if (person.LastName != "Battenberg")
+            // if (person.LastName == "Roche")
+            // if (person.LastName != "Cambridge"  && person.LastName != "Spencer")
+            var age = DateTime.Now.Year - person.DateOfBirth.Year;
+            if(80 < age && age < 100)
                 return person;
 
             ret = Find(person.Mom);
