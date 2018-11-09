@@ -681,23 +681,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Chrisi\\.nuget\\packages\\": {},
+    "C:\\Users\\latochac\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\aufgabe03\\aufgabe03.csproj",
+      "projectUniqueName": "Z:\\git\\Softwaredesign\\Aufgabe03\\aufgabe03.csproj",
       "projectName": "aufgabe03",
-      "projectPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\aufgabe03\\aufgabe03.csproj",
-      "packagesPath": "C:\\Users\\Chrisi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\aufgabe03\\obj\\",
+      "projectPath": "Z:\\git\\Softwaredesign\\Aufgabe03\\aufgabe03.csproj",
+      "packagesPath": "C:\\Users\\latochac\\.nuget\\packages\\",
+      "outputPath": "Z:\\git\\Softwaredesign\\Aufgabe03\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Chrisi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\latochac\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"

@@ -7,10 +7,16 @@
         {
             "name": ".NET Core Launch (console)",
             "type": "coreclr",
+<<<<<<< HEAD
             "request": "launch",           
             "program": "${workspaceFolder}/Aufgabe04/bin/Debug/netcoreapp2.1/Aufgabe04.dll",
+=======
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}Aufgabe03/bin/Debug/netcoreapp2.1/aufgabe03.dll",
+>>>>>>> aa7fd50bc8ee124de1380123aba0420e502613f2
             "args": [],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/Aufgabe03",
             "console": "internalConsole",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"

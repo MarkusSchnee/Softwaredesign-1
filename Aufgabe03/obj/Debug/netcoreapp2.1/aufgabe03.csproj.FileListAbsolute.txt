@@ -9,3 +9,14 @@ C:\Users\Chrisi\Desktop\git\Softwaredesign\aufgabe03\bin\Debug\netcoreapp2.1\auf
 C:\Users\Chrisi\Desktop\git\Softwaredesign\aufgabe03\bin\Debug\netcoreapp2.1\aufgabe03.pdb
 C:\Users\Chrisi\Desktop\git\Softwaredesign\aufgabe03\obj\Debug\netcoreapp2.1\aufgabe03.dll
 C:\Users\Chrisi\Desktop\git\Softwaredesign\aufgabe03\obj\Debug\netcoreapp2.1\aufgabe03.pdb
+Z:\git\Softwaredesign\Aufgabe03\bin\Debug\netcoreapp2.1\aufgabe03.deps.json
+Z:\git\Softwaredesign\Aufgabe03\bin\Debug\netcoreapp2.1\aufgabe03.runtimeconfig.json
+Z:\git\Softwaredesign\Aufgabe03\bin\Debug\netcoreapp2.1\aufgabe03.runtimeconfig.dev.json
+Z:\git\Softwaredesign\Aufgabe03\bin\Debug\netcoreapp2.1\aufgabe03.dll
+Z:\git\Softwaredesign\Aufgabe03\bin\Debug\netcoreapp2.1\aufgabe03.pdb
+Z:\git\Softwaredesign\Aufgabe03\obj\Debug\netcoreapp2.1\aufgabe03.csprojAssemblyReference.cache
+Z:\git\Softwaredesign\Aufgabe03\obj\Debug\netcoreapp2.1\aufgabe03.csproj.CoreCompileInputs.cache
+Z:\git\Softwaredesign\Aufgabe03\obj\Debug\netcoreapp2.1\aufgabe03.AssemblyInfoInputs.cache
+Z:\git\Softwaredesign\Aufgabe03\obj\Debug\netcoreapp2.1\aufgabe03.AssemblyInfo.cs
+Z:\git\Softwaredesign\Aufgabe03\obj\Debug\netcoreapp2.1\aufgabe03.dll
+Z:\git\Softwaredesign\Aufgabe03\obj\Debug\netcoreapp2.1\aufgabe03.pdb
