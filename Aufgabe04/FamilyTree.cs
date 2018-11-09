@@ -21,7 +21,6 @@ namespace Debugging
         {
             Person ret = null;
 
-
             int minAge = 40;
             int maxAge = 60;
 
