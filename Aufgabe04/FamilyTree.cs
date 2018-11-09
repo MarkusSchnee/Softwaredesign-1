@@ -21,10 +21,9 @@ namespace Debugging
         {
             Person ret = null;
 
-            int minAge = 40;           
-
-            int age = DateTime.Now.Year - person.DateOfBirth.Year;
-            if (minAge < age)
+            int minAge = 60;           
+           
+            if (DateTime.Now.Year - person.DateOfBirth.Year >= minAge)
                 return person ;
 
             ret = Find(person.Mom);
