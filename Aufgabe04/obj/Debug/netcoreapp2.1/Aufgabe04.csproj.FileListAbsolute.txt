@@ -1,0 +1,11 @@
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe04\bin\Debug\netcoreapp2.1\Aufgabe04.deps.json
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe04\bin\Debug\netcoreapp2.1\Aufgabe04.runtimeconfig.json
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe04\bin\Debug\netcoreapp2.1\Aufgabe04.runtimeconfig.dev.json
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe04\bin\Debug\netcoreapp2.1\Aufgabe04.dll
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe04\bin\Debug\netcoreapp2.1\Aufgabe04.pdb
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe04\obj\Debug\netcoreapp2.1\Aufgabe04.csprojAssemblyReference.cache
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe04\obj\Debug\netcoreapp2.1\Aufgabe04.csproj.CoreCompileInputs.cache
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe04\obj\Debug\netcoreapp2.1\Aufgabe04.AssemblyInfoInputs.cache
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe04\obj\Debug\netcoreapp2.1\Aufgabe04.AssemblyInfo.cs
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe04\obj\Debug\netcoreapp2.1\Aufgabe04.dll
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe04\obj\Debug\netcoreapp2.1\Aufgabe04.pdb
