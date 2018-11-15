@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\stringumdrehen\\stringumdrehen.csproj",
+      "projectUniqueName": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\Aufgabe05\\stringumdrehen.csproj",
       "projectName": "stringumdrehen",
-      "projectPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\stringumdrehen\\stringumdrehen.csproj",
+      "projectPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\Aufgabe05\\stringumdrehen.csproj",
       "packagesPath": "C:\\Users\\Chrisi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\stringumdrehen\\obj\\",
+      "outputPath": "C:\\Users\\Chrisi\\Desktop\\git\\Softwaredesign\\Aufgabe05\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
