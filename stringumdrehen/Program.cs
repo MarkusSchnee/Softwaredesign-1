@@ -32,7 +32,7 @@ namespace stringumdrehen
             }
  
             Console.Write(outputString[inputString.Length - 1]);
-            Console.ReadKey();
+           
         }
     }
 }
