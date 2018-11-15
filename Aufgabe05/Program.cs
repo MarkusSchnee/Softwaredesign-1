@@ -36,8 +36,6 @@ namespace Aufgabe05
             Console.Write(reversed);
         }
 
-
-
         static void Main(string[] args)
         {
             Console.WriteLine("Please enter a string!");
