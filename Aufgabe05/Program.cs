@@ -5,6 +5,17 @@ namespace Aufgabe05
 {
     class Program
     {
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter a string!");
+            string inputString = Console.ReadLine();
+            Console.Write("\n");
+            ReverseWhole(inputString);
+            ReversePosition(inputString);
+            ReverseLettersinWords(inputString);
+        }
+
         static void ReverseWhole(string input)
         {
             char[] reverse = input.ToCharArray();
@@ -36,14 +47,6 @@ namespace Aufgabe05
             Console.Write(reversed);
         }
 
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Please enter a string!");
-            string inputString = Console.ReadLine();
-            Console.Write("\n");
-            ReverseWhole(inputString);
-            ReversePosition(inputString);
-            ReverseLettersinWords(inputString);
-        }
+
     }
 }
