@@ -14,14 +14,15 @@ namespace Aufgabe06
 
         public Boolean IsAnswerCorrect(char choise)
         {
-            if(choise == this.correct){
+            if (choise == this.correct)
+            {
                 Console.WriteLine("yeah:)");
             }
             else
-            Console.WriteLine("buuuuuh");
+                Console.WriteLine("buuuuuh");
 
 
-            return (choise == this.correct) ;
+            return (choise == this.correct);
 
         }
 

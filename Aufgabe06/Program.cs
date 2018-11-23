@@ -12,7 +12,7 @@ namespace Aufgabe06
             quiz1.correct = 'c';
             quiz1.Show();
             char A = char.Parse(Console.ReadLine());
-           
+
             Console.Write(quiz1.IsAnswerCorrect(A));
 
 
