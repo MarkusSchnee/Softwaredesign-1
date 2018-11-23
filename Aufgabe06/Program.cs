@@ -6,6 +6,7 @@ namespace Aufgabe06
     class Program
     {
         static int Highscore = 0;
+        static int answeredQuestions = 0;
         static void Main(string[] args)
         {
             List<Quizelement> quizelements = new List<Quizelement>();
@@ -29,6 +30,7 @@ namespace Aufgabe06
 
         MainMenue:
             Console.Write("Deine Highscore ist:" + Highscore + "\n");
+            Console.Write("beantwortete Fragen" + answeredQuestions + "\n");
             Console.Write("Bitte was auswählen:\n 1) neue Frage erstellen\n 2) Fragen beantworten\n 3) Beenden\n");
             int maincoice = int.Parse(Console.ReadLine());
             if (maincoice == 1)
@@ -53,7 +55,7 @@ namespace Aufgabe06
                     Console.Write("\nFalsch");
                 }
 
-
+                answeredQuestions += 1;
                 Console.Write("Deine Highscore ist:" + Highscore + "\n");
                 goto MainMenue;
 
