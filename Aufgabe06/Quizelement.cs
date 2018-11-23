@@ -5,35 +5,30 @@ namespace Aufgabe06
 
     public class Quizelement
     {
-        //Was ist ein Assambly
 
         public string question;
-        public string[] answer;
-        public char correct;
+        public answers[] answer;
 
-
-        public Boolean IsAnswerCorrect(char choise)
+        public Quizelement(String question, answers[] answer)
         {
-            if (choise == this.correct)
-            {
-                Console.WriteLine("yeah:)");
-            }
-            else
-                Console.WriteLine("buuuuuh");
-
-
-            return (choise == this.correct);
-
+            this.question = question;
+            this.answer = answer;
         }
 
-        public void Show()
-        {
-            Console.WriteLine(question);
-            foreach (var item in answer)
-            {
-                Console.WriteLine(item.ToString());
-            }
 
+        public void ShowQuestion()
+        {
+            Console.Write("\n"+question+"\n");
+
+            for (int i = 0; i < answer.Length; i++)
+            {
+                Console.WriteLine(answer[i].Answertext);
+            }
         }
+
+
+
+
+
     }
 }
