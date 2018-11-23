@@ -8,19 +8,31 @@ namespace Aufgabe06
         //Was ist ein Assambly
 
         public string question;
-        public string [] answer;
+        public string[] answer;
         public char correct;
 
-        
-        public Boolean IsAnswerCorrect(char choise){
-        
-            return (choise == this.correct);
-    
+
+        public Boolean IsAnswerCorrect(char choise)
+        {
+            if(choise == this.correct){
+                Console.WriteLine("yeah:)");
+            }
+            else
+            Console.WriteLine("buuuuuh");
+
+
+            return (choise == this.correct) ;
+
         }
 
-        void Show(){
+        public void Show()
+        {
             Console.WriteLine(question);
-            Console.WriteLine(answer);
+            foreach (var item in answer)
+            {
+                Console.WriteLine(item.ToString());
+            }
+
         }
     }
 }
