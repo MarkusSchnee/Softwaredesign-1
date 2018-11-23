@@ -1,9 +1,0 @@
-C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe06\bin\Debug\netstandard2.0\Aufgabe06.deps.json
-C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe06\bin\Debug\netstandard2.0\Aufgabe06.dll
-C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe06\bin\Debug\netstandard2.0\Aufgabe06.pdb
-C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe06\obj\Debug\netstandard2.0\Aufgabe06.csprojAssemblyReference.cache
-C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe06\obj\Debug\netstandard2.0\Aufgabe06.csproj.CoreCompileInputs.cache
-C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe06\obj\Debug\netstandard2.0\Aufgabe06.AssemblyInfoInputs.cache
-C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe06\obj\Debug\netstandard2.0\Aufgabe06.AssemblyInfo.cs
-C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe06\obj\Debug\netstandard2.0\Aufgabe06.dll
-C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe06\obj\Debug\netstandard2.0\Aufgabe06.pdb
