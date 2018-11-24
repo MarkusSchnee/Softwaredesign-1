@@ -96,46 +96,46 @@ namespace Aufgabe06
         {
             quizElementList.Add(new Quizelement("Wer war der erste Bundeskanzler",
                 new answerClass[]{
-                new answerClass("Angela Merkel", false),
-                new answerClass("Brack Obama", false),
-                new answerClass("Helmut Kohl", false),
-                new answerClass("Konrad Adenauer", true)
+                new answerClass("1) Angela Merkel", false),
+                new answerClass("2) Brack Obama", false),
+                new answerClass("3) Helmut Kohl", false),
+                new answerClass("4) Konrad Adenauer", true)
             }));
 
             quizElementList.Add(new Quizelement("Wer ist ohne jeden Zweifel die allerwichtigste Person in Vault 101, der Eine, der uns von den grausamen Bedingungen der Atomwüste schützt, dem wir alles, sogar unser Leben, verdanken?",
                 new answerClass[]{
-                new answerClass("Der Aufseher", true),
-                new answerClass("Der Aufseher", true),
-                new answerClass("Der Aufseher", true),
-                new answerClass("Der Aufseher", true)
+                new answerClass("1) Der Aufseher", true),
+                new answerClass("2) Der Aufseher", true),
+                new answerClass("3) Der Aufseher", true),
+                new answerClass("4) Der Aufseher", true)
              }));
 
             quizElementList.Add(new Quizelement("Wie heißt das Tierwesen(aus Phantastische Tierwesen), welches verrückt nach allem ist was glänzt?",
                 new answerClass[]{
-                new answerClass("Uli Hoeneß", false),
-                new answerClass("Niffler", true),
-                new answerClass("Donnervogel", false)
+                new answerClass("1) Uli Hoeneß", false),
+                new answerClass("2) Niffler", true),
+                new answerClass("3) Donnervogel", false)
             }));
 
             quizElementList.Add(new Quizelement("Wo geht man durch ein Loch und durch zwei wieder raus?",
                 new answerClass[]{
-                new answerClass("Hose", true),
-                new answerClass("T-Shirt", false),
+                new answerClass("1) Hose", true),
+                new answerClass("2) T-Shirt", false),
            }));
 
             quizElementList.Add(new Quizelement("Aus welchem Material ist der Sarg von Schneewittchen?",
                 new answerClass[]{
-                new answerClass("Stein", false),
-                new answerClass("Diamant", false),
-                new answerClass("Glas", true),
-                new answerClass("Pappe", false),
+                new answerClass("1) Stein", false),
+                new answerClass("2) Diamant", false),
+                new answerClass("3) Glas", true),
+                new answerClass("4) Pappe", false),
             }));
             quizElementList.Add(new Quizelement("Messer Gabel Schere Licht sind für",
             new answerClass[]{
-                new answerClass("kurze Zeit wasserdicht", false),
-                new answerClass("ältere Elfen nicht", false),
-                new answerClass("lange Reisen Pflicht", false),
-                new answerClass("kleine Kinder nicht", true)
+                new answerClass("1) kurze Zeit wasserdicht", false),
+                new answerClass("2) ältere Elfen nicht", false),
+                new answerClass("3) lange Reisen Pflicht", false),
+                new answerClass("4) kleine Kinder nicht", true)
             }));
 
         }
