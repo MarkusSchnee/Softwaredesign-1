@@ -7,7 +7,7 @@ namespace Aufgabe06
     {
         static int Highscore = 0;
         static int answeredQuestions = 0;
-        static List<Quizelement> quizelements = new List<Quizelement>();
+        static List<Quizelement> quizElementList = new List<Quizelement>();
         static void Main(string[] args)
         {
             createQuizelements();
@@ -16,7 +16,7 @@ namespace Aufgabe06
 
         public static void createQuizelements()
         {
-            quizelements.Add(new Quizelement("Wer war der erste Bundeskanzler", new answerClass[]
+            quizElementList.Add(new Quizelement("Wer war der erste Bundeskanzler", new answerClass[]
                         {
                 new answerClass("Angela Merkel", false),
                 new answerClass("Brack Obama", false),
@@ -24,7 +24,7 @@ namespace Aufgabe06
                 new answerClass("Konrad Adenauer", true)
                         }));
 
-            quizelements.Add(new Quizelement("Wer ist ohne jeden Zweifel die allerwichtigste Person in Vault 101, der Eine, der uns von den grausamen Bedingungen der Atomwüste schützt, dem wir alles, sogar unser Leben, verdanken?", new answerClass[]
+            quizElementList.Add(new Quizelement("Wer ist ohne jeden Zweifel die allerwichtigste Person in Vault 101, der Eine, der uns von den grausamen Bedingungen der Atomwüste schützt, dem wir alles, sogar unser Leben, verdanken?", new answerClass[]
             {
                 new answerClass("Der Aufseher", true),
                 new answerClass("Der Aufseher", true),
@@ -32,25 +32,38 @@ namespace Aufgabe06
                 new answerClass("Der Aufseher", true)
             }));
 
-            quizelements.Add(new Quizelement("Wie heißt das Tierwesen(aus Phantastische Tierwesen), welches verrückt nach allem ist was glänzt?", new answerClass[]
+            quizElementList.Add(new Quizelement("Wie heißt das Tierwesen(aus Phantastische Tierwesen), welches verrückt nach allem ist was glänzt?", new answerClass[]
             {
                 new answerClass("Uli Hoeneß", false),
                 new answerClass("Niffler", true),
-                new answerClass("Donnervogel", false)              
+                new answerClass("Donnervogel", false)
             }));
 
-             quizelements.Add(new Quizelement("Wo geht man durch ein Loch und durch zwei wieder raus?", new answerClass[]
-            {
+            quizElementList.Add(new Quizelement("Wo geht man durch ein Loch und durch zwei wieder raus?", new answerClass[]
+           {
                 new answerClass("Hose", true),
-                new answerClass("T-Shirt", false),                            
+                new answerClass("T-Shirt", false),
+           }));
+
+            quizElementList.Add(new Quizelement("Aus welchem Material ist der Sarg von Schneewittchen?", new answerClass[]
+            {
+                new answerClass("Stein", false),
+                new answerClass("Diamant", false),
+                new answerClass("Glas", true),
+                new answerClass("Pappe", false),
+            }));
+            quizElementList.Add(new Quizelement("Messer Gabel Schere Licht sind für", new answerClass[]
+            {
+                new answerClass("kurze Zeit wasserdicht", false),
+                new answerClass("ältere Elfen nicht", false),
+                new answerClass("lange Reisen Pflicht", false),
+                new answerClass("kleine Kinder nicht", true)
             }));
 
         }
 
         public static void MainMenue()
         {
-
-        MainMenue:
             try
             {
 
@@ -61,14 +74,14 @@ namespace Aufgabe06
                 if (maincoice == 1)
                 {
                     NewQuestion();
-                    goto MainMenue;
+                    MainMenue();
                 }
                 else if (maincoice == 2)
                 {
                     Random random = new Random();
-                    int randomQuestion = random.Next(quizelements.Count);
-                    AnswerQuestion(quizelements[randomQuestion]);
-                    goto MainMenue;
+                    int randomQuestion = random.Next(quizElementList.Count);
+                    AnswerQuestion(quizElementList[randomQuestion]);
+                    MainMenue();
                 }
 
                 else if (maincoice == 3)
@@ -78,7 +91,7 @@ namespace Aufgabe06
                 else
                 {
                     Console.WriteLine("Falsche Eingabe. Zurück zum Hauptmenü!");
-                    goto MainMenue;
+                    MainMenue();
                 }
 
             }
@@ -91,7 +104,7 @@ namespace Aufgabe06
 
         public static void AnswerQuestion(Quizelement quizelement)
         {
-            quizelement.ShowQuestion();
+            quizelement.Show();
             Console.Write("\nBitte eine Antwort wählen ");
             int AnswerChoice = int.Parse(Console.ReadLine()) - 1;
 
@@ -124,7 +137,7 @@ namespace Aufgabe06
                 Console.Write("Bitte Antwort eingeben\n> ");
                 userAnswer[i] = new answerClass(Console.ReadLine(), false);
             }
-            quizelements.Add(new Quizelement(userQuestion, userAnswer));
+            quizElementList.Add(new Quizelement(userQuestion, userAnswer));
         }
     }
 }

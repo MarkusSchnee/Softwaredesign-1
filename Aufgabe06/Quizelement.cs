@@ -16,7 +16,7 @@ namespace Aufgabe06
         }
 
 
-        public void ShowQuestion()
+        public void Show()
         {
             Console.Write("\n" + question + "\n");
 
