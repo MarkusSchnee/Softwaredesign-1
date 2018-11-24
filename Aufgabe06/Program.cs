@@ -36,10 +36,14 @@ namespace Aufgabe06
             {
                 new answers("Uli Hoeneß", false),
                 new answers("Niffler", true),
-                new answers("Donnervogel", false),
-              
+                new answers("Donnervogel", false)              
             }));
 
+             quizelements.Add(new Quizelement("Wo geht man durch ein Loch und durch zwei wieder raus?", new answers[]
+            {
+                new answers("Hose", true),
+                new answers("T-Shirt", false),                            
+            }));
 
         }
 
