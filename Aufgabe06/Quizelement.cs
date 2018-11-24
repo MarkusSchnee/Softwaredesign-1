@@ -25,10 +25,5 @@ namespace Aufgabe06
                 Console.WriteLine(answer[i].Answertext);
             }
         }
-
-
-
-
-
-    }
+     }
 }
