@@ -12,7 +12,7 @@ namespace Aufgabe06
         {
             CreateQuizElements();
             MainMenu();
-        }       
+        }
 
         public static void MainMenu()
         {
@@ -92,46 +92,46 @@ namespace Aufgabe06
             quizElementList.Add(new Quizelement(userQuestion, userAnswer));
         }
 
-         public static void CreateQuizElements()
+        public static void CreateQuizElements()
         {
-            quizElementList.Add(new Quizelement("Wer war der erste Bundeskanzler", new answerClass[]
-                        {
+            quizElementList.Add(new Quizelement("Wer war der erste Bundeskanzler",
+                new answerClass[]{
                 new answerClass("Angela Merkel", false),
                 new answerClass("Brack Obama", false),
                 new answerClass("Helmut Kohl", false),
                 new answerClass("Konrad Adenauer", true)
-                        }));
+            }));
 
-            quizElementList.Add(new Quizelement("Wer ist ohne jeden Zweifel die allerwichtigste Person in Vault 101, der Eine, der uns von den grausamen Bedingungen der Atomwüste schützt, dem wir alles, sogar unser Leben, verdanken?", new answerClass[]
-            {
+            quizElementList.Add(new Quizelement("Wer ist ohne jeden Zweifel die allerwichtigste Person in Vault 101, der Eine, der uns von den grausamen Bedingungen der Atomwüste schützt, dem wir alles, sogar unser Leben, verdanken?",
+                new answerClass[]{
                 new answerClass("Der Aufseher", true),
                 new answerClass("Der Aufseher", true),
                 new answerClass("Der Aufseher", true),
                 new answerClass("Der Aufseher", true)
-            }));
+             }));
 
-            quizElementList.Add(new Quizelement("Wie heißt das Tierwesen(aus Phantastische Tierwesen), welches verrückt nach allem ist was glänzt?", new answerClass[]
-            {
+            quizElementList.Add(new Quizelement("Wie heißt das Tierwesen(aus Phantastische Tierwesen), welches verrückt nach allem ist was glänzt?",
+                new answerClass[]{
                 new answerClass("Uli Hoeneß", false),
                 new answerClass("Niffler", true),
                 new answerClass("Donnervogel", false)
             }));
 
-            quizElementList.Add(new Quizelement("Wo geht man durch ein Loch und durch zwei wieder raus?", new answerClass[]
-           {
+            quizElementList.Add(new Quizelement("Wo geht man durch ein Loch und durch zwei wieder raus?",
+                new answerClass[]{
                 new answerClass("Hose", true),
                 new answerClass("T-Shirt", false),
            }));
 
-            quizElementList.Add(new Quizelement("Aus welchem Material ist der Sarg von Schneewittchen?", new answerClass[]
-            {
+            quizElementList.Add(new Quizelement("Aus welchem Material ist der Sarg von Schneewittchen?",
+                new answerClass[]{
                 new answerClass("Stein", false),
                 new answerClass("Diamant", false),
                 new answerClass("Glas", true),
                 new answerClass("Pappe", false),
             }));
-            quizElementList.Add(new Quizelement("Messer Gabel Schere Licht sind für", new answerClass[]
-            {
+            quizElementList.Add(new Quizelement("Messer Gabel Schere Licht sind für",
+            new answerClass[]{
                 new answerClass("kurze Zeit wasserdicht", false),
                 new answerClass("ältere Elfen nicht", false),
                 new answerClass("lange Reisen Pflicht", false),
