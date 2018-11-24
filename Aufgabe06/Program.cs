@@ -10,11 +10,89 @@ namespace Aufgabe06
         static List<Quizelement> quizElementList = new List<Quizelement>();
         static void Main(string[] args)
         {
-            createQuizelements();
-            MainMenue();
+            CreateQuizElements();
+            MainMenu();
+        }       
+
+        public static void MainMenu()
+        {
+            try
+            {
+
+                Console.Write("Deine Highscore ist: " + Highscore + "\n");
+                Console.Write("beantwortete Fragen: " + answeredQuestions + "\n");
+                Console.Write("Bitte was auswählen:\n 1) neue Frage erstellen\n 2) Fragen beantworten\n 3) Beenden\n");
+                int maincoice = int.Parse(Console.ReadLine());
+                if (maincoice == 1)
+                {
+                    NewQuestion();
+                    MainMenu();
+                }
+                else if (maincoice == 2)
+                {
+                    Random random = new Random();
+                    int randomQuestion = random.Next(quizElementList.Count);
+                    AnswerQuestion(quizElementList[randomQuestion]);
+                    MainMenu();
+                }
+
+                else if (maincoice == 3)
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    Console.WriteLine("Falsche Eingabe. Zurück zum Hauptmenü!");
+                    MainMenu();
+                }
+
+            }
+            catch
+            {
+                Console.WriteLine("Falsche Eingabe. Zurück zum Hauptmenü!");
+                MainMenu();
+            }
         }
 
-        public static void createQuizelements()
+        public static void AnswerQuestion(Quizelement quizelement)
+        {
+            quizelement.Show();
+            Console.Write("\nBitte eine Antwort wählen ");
+            int AnswerChoice = int.Parse(Console.ReadLine()) - 1;
+
+            if (quizelement.answer[AnswerChoice].isRightOrWrong())
+            {
+                Highscore += 1;
+                Console.Write("\nRichtig\n");
+            }
+            else
+            {
+                Console.Write("\nFalsch\n");
+            }
+            answeredQuestions += 1;
+        }
+
+        public static void NewQuestion()
+        {
+            Console.Write("Bitte neue Frage eingeben\n> ");
+            String userQuestion = Console.ReadLine();
+
+            Console.Write("Wieviele Antwortmöglichkeiten soll es geben? (Bitte eine Zahl 2-6)\n> ");
+            int howManyAnswers = Int32.Parse(Console.ReadLine());
+            answerClass[] userAnswer = new answerClass[howManyAnswers];
+
+            Console.Write("Bitte die Richtige Antwort eingeben: \n> ");
+            userAnswer[0] = new answerClass(Console.ReadLine(), true);
+
+            for (int i = 1; i < howManyAnswers; i++)
+            {
+                Console.Write("Bitte Antwort eingeben\n> ");
+                userAnswer[i] = new answerClass(Console.ReadLine(), false);
+            }
+            quizElementList.Add(new Quizelement(userQuestion, userAnswer));
+        }
+
+         public static void CreateQuizElements()
         {
             quizElementList.Add(new Quizelement("Wer war der erste Bundeskanzler", new answerClass[]
                         {
@@ -60,84 +138,6 @@ namespace Aufgabe06
                 new answerClass("kleine Kinder nicht", true)
             }));
 
-        }
-
-        public static void MainMenue()
-        {
-            try
-            {
-
-                Console.Write("Deine Highscore ist: " + Highscore + "\n");
-                Console.Write("beantwortete Fragen: " + answeredQuestions + "\n");
-                Console.Write("Bitte was auswählen:\n 1) neue Frage erstellen\n 2) Fragen beantworten\n 3) Beenden\n");
-                int maincoice = int.Parse(Console.ReadLine());
-                if (maincoice == 1)
-                {
-                    NewQuestion();
-                    MainMenue();
-                }
-                else if (maincoice == 2)
-                {
-                    Random random = new Random();
-                    int randomQuestion = random.Next(quizElementList.Count);
-                    AnswerQuestion(quizElementList[randomQuestion]);
-                    MainMenue();
-                }
-
-                else if (maincoice == 3)
-                {
-                    Environment.Exit(0);
-                }
-                else
-                {
-                    Console.WriteLine("Falsche Eingabe. Zurück zum Hauptmenü!");
-                    MainMenue();
-                }
-
-            }
-            catch
-            {
-                Console.WriteLine("Falsche Eingabe. Zurück zum Hauptmenü!");
-                goto MainMenue;
-            }
-        }
-
-        public static void AnswerQuestion(Quizelement quizelement)
-        {
-            quizelement.Show();
-            Console.Write("\nBitte eine Antwort wählen ");
-            int AnswerChoice = int.Parse(Console.ReadLine()) - 1;
-
-            if (quizelement.answer[AnswerChoice].isRightOrWrong())
-            {
-                Highscore += 1;
-                Console.Write("\nRichtig\n");
-            }
-            else
-            {
-                Console.Write("\nFalsch\n");
-            }
-            answeredQuestions += 1;
-        }
-
-        public static void NewQuestion()
-        {
-            Console.Write("Bitte neue Frage eingeben\n> ");
-            String userQuestion = Console.ReadLine();
-
-            Console.Write("Wieviele Antwortmöglichkeiten soll es geben? (Bitte eine Zahl 2-6)\n> ");
-            int howManyAnswers = Int32.Parse(Console.ReadLine());
-            answerClass[] userAnswer = new answerClass[howManyAnswers];
-
-            Console.Write("Bitte die Richtige Antwort eingeben: \n> ");
-            userAnswer[0] = new answerClass(Console.ReadLine(), true);
-
-            for (int i = 1; i < howManyAnswers; i++)
-            {
-                Console.Write("Bitte Antwort eingeben\n> ");
-                userAnswer[i] = new answerClass(Console.ReadLine(), false);
-            }
-            quizElementList.Add(new Quizelement(userQuestion, userAnswer));
         }
     }
 }
