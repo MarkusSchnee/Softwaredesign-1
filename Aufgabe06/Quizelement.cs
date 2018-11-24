@@ -7,9 +7,9 @@ namespace Aufgabe06
     {
 
         public string question;
-        public answers[] answer;
+        public answerClass[] answer;
 
-        public Quizelement(String question, answers[] answer)
+        public Quizelement(String question, answerClass[] answer)
         {
             this.question = question;
             this.answer = answer;
@@ -18,12 +18,13 @@ namespace Aufgabe06
 
         public void ShowQuestion()
         {
-            Console.Write("\n"+question+"\n");
+            Console.Write("\n" + question + "\n");
 
             for (int i = 0; i < answer.Length; i++)
             {
                 Console.WriteLine(answer[i].Answertext);
+
             }
         }
-     }
+    }
 }

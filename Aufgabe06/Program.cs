@@ -16,33 +16,33 @@ namespace Aufgabe06
 
         public static void createQuizelements()
         {
-            quizelements.Add(new Quizelement("Wer war der erste Bundeskanzler", new answers[]
+            quizelements.Add(new Quizelement("Wer war der erste Bundeskanzler", new answerClass[]
                         {
-                new answers("Angela Merkel", false),
-                new answers("Brack Obama", false),
-                new answers("Helmut Kohl", false),
-                new answers("Konrad Adenauer", true)
+                new answerClass("Angela Merkel", false),
+                new answerClass("Brack Obama", false),
+                new answerClass("Helmut Kohl", false),
+                new answerClass("Konrad Adenauer", true)
                         }));
 
-            quizelements.Add(new Quizelement("Wer ist ohne jeden Zweifel die allerwichtigste Person in Vault 101, der Eine, der uns von den grausamen Bedingungen der Atomwüste schützt, dem wir alles, sogar unser Leben, verdanken?", new answers[]
+            quizelements.Add(new Quizelement("Wer ist ohne jeden Zweifel die allerwichtigste Person in Vault 101, der Eine, der uns von den grausamen Bedingungen der Atomwüste schützt, dem wir alles, sogar unser Leben, verdanken?", new answerClass[]
             {
-                new answers("Der Aufseher", true),
-                new answers("Der Aufseher", true),
-                new answers("Der Aufseher", true),
-                new answers("Der Aufseher", true)
+                new answerClass("Der Aufseher", true),
+                new answerClass("Der Aufseher", true),
+                new answerClass("Der Aufseher", true),
+                new answerClass("Der Aufseher", true)
             }));
 
-            quizelements.Add(new Quizelement("Wie heißt das Tierwesen(aus Phantastische Tierwesen), welches verrückt nach allem ist was glänzt?", new answers[]
+            quizelements.Add(new Quizelement("Wie heißt das Tierwesen(aus Phantastische Tierwesen), welches verrückt nach allem ist was glänzt?", new answerClass[]
             {
-                new answers("Uli Hoeneß", false),
-                new answers("Niffler", true),
-                new answers("Donnervogel", false)              
+                new answerClass("Uli Hoeneß", false),
+                new answerClass("Niffler", true),
+                new answerClass("Donnervogel", false)              
             }));
 
-             quizelements.Add(new Quizelement("Wo geht man durch ein Loch und durch zwei wieder raus?", new answers[]
+             quizelements.Add(new Quizelement("Wo geht man durch ein Loch und durch zwei wieder raus?", new answerClass[]
             {
-                new answers("Hose", true),
-                new answers("T-Shirt", false),                            
+                new answerClass("Hose", true),
+                new answerClass("T-Shirt", false),                            
             }));
 
         }
@@ -114,15 +114,15 @@ namespace Aufgabe06
 
             Console.Write("Wieviele Antwortmöglichkeiten soll es geben? (Bitte eine Zahl 2-6)\n> ");
             int howManyAnswers = Int32.Parse(Console.ReadLine());
-            answers[] userAnswer = new answers[howManyAnswers];
+            answerClass[] userAnswer = new answerClass[howManyAnswers];
 
             Console.Write("Bitte die Richtige Antwort eingeben: \n> ");
-            userAnswer[0] = new answers(Console.ReadLine(), true);
+            userAnswer[0] = new answerClass(Console.ReadLine(), true);
 
             for (int i = 1; i < howManyAnswers; i++)
             {
                 Console.Write("Bitte Antwort eingeben\n> ");
-                userAnswer[i] = new answers(Console.ReadLine(), false);
+                userAnswer[i] = new answerClass(Console.ReadLine(), false);
             }
             quizelements.Add(new Quizelement(userQuestion, userAnswer));
         }
