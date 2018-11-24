@@ -32,6 +32,15 @@ namespace Aufgabe06
                 new answers("Der Aufseher", true)
             }));
 
+            quizelements.Add(new Quizelement("Wie heißt das Tierwesen(aus Phantastische Tierwesen), welches verrückt nach allem ist was glänzt?", new answers[]
+            {
+                new answers("Uli Hoeneß", false),
+                new answers("Niffler", true),
+                new answers("Donnervogel", false),
+              
+            }));
+
+
         }
 
         public static void MainMenue()
@@ -41,8 +50,8 @@ namespace Aufgabe06
             try
             {
 
-                Console.Write("Deine Highscore ist:" + Highscore + "\n");
-                Console.Write("beantwortete Fragen" + answeredQuestions + "\n");
+                Console.Write("Deine Highscore ist: " + Highscore + "\n");
+                Console.Write("beantwortete Fragen: " + answeredQuestions + "\n");
                 Console.Write("Bitte was auswählen:\n 1) neue Frage erstellen\n 2) Fragen beantworten\n 3) Beenden\n");
                 int maincoice = int.Parse(Console.ReadLine());
                 if (maincoice == 1)
@@ -53,7 +62,7 @@ namespace Aufgabe06
                 else if (maincoice == 2)
                 {
                     Random random = new Random();
-                    int randomQuestion = random.Next(quizelements.Count);     
+                    int randomQuestion = random.Next(quizelements.Count);
                     AnswerQuestion(quizelements[randomQuestion]);
                     goto MainMenue;
                 }
@@ -85,14 +94,13 @@ namespace Aufgabe06
             if (quizelement.answer[AnswerChoice].isRightOrWrong())
             {
                 Highscore += 1;
-                Console.Write("\nRichtig");
+                Console.Write("\nRichtig\n");
             }
             else
             {
-                Console.Write("\nFalsch");
+                Console.Write("\nFalsch\n");
             }
             answeredQuestions += 1;
-            Console.Write("Deine Highscore ist:" + Highscore + "\n");
         }
 
         public static void NewQuestion()
@@ -113,10 +121,6 @@ namespace Aufgabe06
                 userAnswer[i] = new answers(Console.ReadLine(), false);
             }
             quizelements.Add(new Quizelement(userQuestion, userAnswer));
-
         }
-
-
-
     }
 }
