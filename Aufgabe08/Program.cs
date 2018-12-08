@@ -47,27 +47,27 @@ namespace Aufgabe08
                     break;
                 }
 
-            }while (isGameRunning);
+            } while (isGameRunning);
         }
 
         public static void CreateDefaultQuestion()
         {
+            questionCatalogue.Add(new EstimationQuestion("Wie viele Einkerbungen hat ein Golfball", 336));
+            questionCatalogue.Add(new YesNoQ("Waren die Menschen auf dem Mond", true));
             questionCatalogue.Add(new MultipleAnswers("Was ist alles ein Säugetier?", new List<AnswerClass>{
                 new AnswerClass("Wal", true),
                 new AnswerClass("Delphin", true),
                 new AnswerClass("Spinne", false),
                 new AnswerClass("Kuh", true),
             }));
+            questionCatalogue.Add(new WritingQ("Wer ist ohne jeden Zweifel die allerwichtigste Person in Vault 101, der Eine, der uns von den grausamen Bedingungen der Atomwüste schützt, dem wir alles, sogar unser Leben, verdanken?", "Der Aufseher"));
+            questionCatalogue.Add(new WritingQ("Was hat 4 Beine und kann nicht laufen?", "Tisch"));
             questionCatalogue.Add(new MultipleChoiceQ("Wie heißt das Tierwesen(aus Phantastische Tierwesen), welches verrückt nach allem ist was glänzt?", new List<AnswerClass>{
                 new AnswerClass("Niffler", true),
                 new AnswerClass("Uli Hoeneß", false),
                 new AnswerClass("Donnervogel", false),
                 new AnswerClass("Phoenix", false)
             }));
-            questionCatalogue.Add(new EstimationQuestion("Wie viele Einkerbungen hat ein Golfball", 336));
-            questionCatalogue.Add(new YesNoQ("Waren die Menschen auf dem Mond", true));
-            questionCatalogue.Add(new WritingQ("Wer ist ohne jeden Zweifel die allerwichtigste Person in Vault 101, der Eine, der uns von den grausamen Bedingungen der Atomwüste schützt, dem wir alles, sogar unser Leben, verdanken?", "Der Aufseher"));
-            questionCatalogue.Add(new WritingQ("Was hat 4 Beine und kann nicht laufen?", "Tisch"));
         }
         public static void AskQuestion()
         {
@@ -344,7 +344,7 @@ namespace Aufgabe08
         {
             this.Questiontext = Questiontext;
             this.WordToWrite = WordToWrite;
-            this.callToAction = "Type the correct word!";
+            this.callToAction = "Bitte das Richtige Wort eingeben!";
         }
         public string WordToWrite;
         public override void Show()
