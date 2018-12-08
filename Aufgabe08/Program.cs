@@ -77,7 +77,7 @@ namespace Aufgabe08
             Question randomQuestiontoAsk = questionCatalogue[randomQIntdex]();
             Question.showQuestion;
 
-            if (Question.Questiontype == MultipleChoiceQ || Question.Questiontype == MultipleAnswersQ)
+            if (randomQuestiontoAsk.Questiontype == MultipleChoiceQ || randomQuestiontoAsk.Questiontype == MultipleAnswersQ)
             {
                 int i = 0;
                 while (i < Answerlist.Count)
@@ -89,7 +89,7 @@ namespace Aufgabe08
 
                 while (i > Answerlist.Count)
                 {
-                    value response = Console.ReadLine;
+                    var response = Console.ReadLine;
                     if (randomQuestiontoAsk.checkAnswer(response))
                     {
                         addPoints();
@@ -103,9 +103,9 @@ namespace Aufgabe08
                 }
 
             }
-            else if (Question.Questiontype == YN || Question.Questiontype == EstimationQuestion || Question.Questiontype == WrtingQ)
+            else if (randomQuestiontoAsk.Questiontype == YN || randomQuestiontoAsk.Questiontype == EstimationQuestion || randomQuestiontoAsk.Questiontype == WrtingQ)
             {
-                value Useranswer = Console.ReadLine();
+                var Useranswer = Console.ReadLine();
                 if (randomQuestiontoAsk.checkAnswer(Useranswer))
                 {
                     addPoints();
