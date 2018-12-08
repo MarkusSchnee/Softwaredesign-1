@@ -92,104 +92,86 @@ namespace Aufgabe08
         }
         public static void InsertQuestion()
         {
-            Console.WriteLine("Please insert your question");
-            string userQuestion = Console.ReadLine();
+            Console.WriteLine("Bitte Frage eingeben!");
+            string Questiontext = Console.ReadLine();
 
-            Console.Write("Type the number corresponding to the question type you want to add. \n" +
-            "1: freetext question \n" +
-            "2: yes/no question \n" +
-            "3: guess question \n" +
-            "4: multiple answer question \n" +
-            "5: single answer question \n");
-            string questionType = Console.ReadLine();
+            Console.Write("Um was für ein Fragentyp handelt es sich?. \n" +
+            "1: Text eingeben \n" +
+            "2: Ja oder Nein Frage \n" +
+            "3: Schätzfrage \n" +
+            "4: Frage mit mehreren richigen Anwtorten \n" +
+            "5: Frage mit einer richtigen Anwtort \n");
+            string Type = Console.ReadLine();
 
-            switch (questionType)
+            switch (Type)
             {
                 case "1":
-                    questionCatalogue.Add(AddFreeTextQuestion(userQuestion));
+                    Console.WriteLine("Bitte Richtige Antwort eingeben!");
+                    String answertext = Console.ReadLine();
+                    questionCatalogue.Add(new WritingQ(Questiontext, answertext));
                     break;
                 case "2":
-                    questionCatalogue.Add(AddBinaryQuestion(userQuestion));
+                    Console.WriteLine("Hieb y wenns richtig ist ein und n wenn nicht.");
+                    string input = Console.ReadLine();
+                    bool isCorrectYoN = false;
+                    if (input == "y")
+                    {
+                        isCorrectYoN = true;
+                    }
+                    questionCatalogue.Add(new YesNoQ(Questiontext, isCorrectYoN));
                     break;
                 case "3":
-                    questionCatalogue.Add(AddGuessQuestion(userQuestion));
+                    Console.WriteLine("Bitte die Richtige Zahl eingeben.");
+                    int numberToGuess = Int32.Parse(Console.ReadLine());
+                    questionCatalogue.Add(new EstimationQuestion(Questiontext, numberToGuess));
                     break;
                 case "4":
-                    questionCatalogue.Add(AddMultiQuestion(userQuestion));
+                    Console.WriteLine("Wieviele Antworten soll es geben?");
+                    int answerCount = Int32.Parse(Console.ReadLine());
+                    List<AnswerClass> newAnswer = new List<AnswerClass>();
+                    AnswerClass userAnswer = new AnswerClass();
+                    bool isCorrect;
+                    string text;
+                    for (int i = 0; i < answerCount; i++)
+                    {
+                        Console.WriteLine("Bitte Anwort eingeben");
+                        text = Console.ReadLine();
+                        Console.WriteLine("Type y if that answer is correct and n if it is not");
+                        if (Console.ReadLine() == "y")
+                        {
+                            isCorrect = true;
+                        }
+                        else
+                        {
+                            isCorrect = false;
+                        }
+                        newAnswer.Add(new AnswerClass(text, isCorrect));
+                    }
+                    questionCatalogue.Add(new MultipleAnswers(Questiontext, newAnswer));
                     break;
                 case "5":
-                    questionCatalogue.Add(AddSingleQuestion(userQuestion));
+                    Console.WriteLine("Wieviele Antworten soll es geben?");
+                    int answerCountSingle = Int32.Parse(Console.ReadLine());
+                    List<AnswerClass> newAnswerS = new List<AnswerClass>();
+                    Console.WriteLine("Bitte Richtige Antwtort eingeben!");
+                    newAnswerS.Add(new AnswerClass(Console.ReadLine(), true));
+                    for (int i = 0; i < answerCountSingle; i++)
+                    {
+                        Console.WriteLine("Bitte Anwort eingeben");
+                        newAnswerS.Add(new AnswerClass(Console.ReadLine(), false));
+                    }
+                    questionCatalogue.Add(new MultipleChoiceQ(Questiontext, newAnswerS));
                     break;
                 default:
-                    Console.WriteLine("Your input was not valid.");
                     break;
             }
-            Console.WriteLine("Your question was successfully added.");
+            Console.WriteLine("Quizfrage erfolgreich hinzugefügt");
         }
 
-        public static Question AddFreeTextQuestion(string Questiontext)
-        {
-            Console.WriteLine("Please insert the correct answer");
-            return new WritingQ(Questiontext, Console.ReadLine());
-        }
-        public static Question AddBinaryQuestion(string Questiontext)
-        {
-            Console.WriteLine("Type y if your question is correct and n if it is not");
-            string input = Console.ReadLine();
-            bool isCorrect = false;
-            if (input == "y")
-            {
-                isCorrect = true;
-            }
-            return new YesNoQ(Questiontext, isCorrect);
-        }
-        public static Question AddGuessQuestion(string Questiontext)
-        {
-            Console.WriteLine("Please insert the correct number");
-            int number = Int32.Parse(Console.ReadLine());
-            return new EstimationQuestion(Questiontext, number);
-        }
-        public static Question AddMultiQuestion(string Questiontext)
-        {
-            Console.WriteLine("How many possible answers do you want?");
-            int howManyAnswers = Int32.Parse(Console.ReadLine());
-            List<AnswerClass> userAnswers = new List<AnswerClass>();
-            AnswerClass userAnswer = new AnswerClass();
-            bool isCorrect;
-            string text;
-            for (int i = 0; i < howManyAnswers; i++)
-            {
-                Console.WriteLine("Please insert an answer");
-                text = Console.ReadLine();
-                Console.WriteLine("Type y if that answer is correct and n if it is not");
-                if (Console.ReadLine() == "y")
-                {
-                    isCorrect = true;
-                }
-                else
-                {
-                    isCorrect = false;
-                }
-                userAnswers.Add(new AnswerClass(text, isCorrect));
-            }
-            return new MultipleAnswers(Questiontext, userAnswers);
-        }
-        public static Question AddSingleQuestion(string Questiontext)
-        {
-            Console.WriteLine("How many possible answers do you want?");
-            int howManyAnswers = Int32.Parse(Console.ReadLine());
-            List<AnswerClass> userAnswers = new List<AnswerClass>();
 
-            Console.WriteLine("Please insert the correct answer");
-            userAnswers.Add(new AnswerClass(Console.ReadLine(), true));
 
-            for (int i = 0; i < howManyAnswers; i++)
-            {
-                Console.WriteLine("Please insert an answer");
-                userAnswers.Add(new AnswerClass(Console.ReadLine(), false));
-            }
-            return new MultipleChoiceQ(Questiontext, userAnswers);
-        }
+
+
 
     }
 
