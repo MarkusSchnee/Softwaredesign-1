@@ -1,0 +1,11 @@
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\bin\Debug\netcoreapp2.1\Aufgabe08.deps.json
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\bin\Debug\netcoreapp2.1\Aufgabe08.runtimeconfig.json
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\bin\Debug\netcoreapp2.1\Aufgabe08.runtimeconfig.dev.json
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\bin\Debug\netcoreapp2.1\Aufgabe08.dll
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\bin\Debug\netcoreapp2.1\Aufgabe08.pdb
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\obj\Debug\netcoreapp2.1\Aufgabe08.csprojAssemblyReference.cache
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\obj\Debug\netcoreapp2.1\Aufgabe08.csproj.CoreCompileInputs.cache
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\obj\Debug\netcoreapp2.1\Aufgabe08.AssemblyInfoInputs.cache
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\obj\Debug\netcoreapp2.1\Aufgabe08.AssemblyInfo.cs
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\obj\Debug\netcoreapp2.1\Aufgabe08.dll
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\obj\Debug\netcoreapp2.1\Aufgabe08.pdb
