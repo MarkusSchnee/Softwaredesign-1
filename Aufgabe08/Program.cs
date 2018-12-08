@@ -1,285 +1,376 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
+
 
 namespace Aufgabe08
 {
     class Program
     {
-        static int points = 0, attemptedQuestions = 0;
-        static bool isQuizGameRunning;
-        static List<Question> questionCatalogue;
-        // IOClass inputoutput;
+        static bool isGameRunning;
+        static public int Points = 0;
+        static public int attemptedQuestions = 0;
+        static public List<Question> questionCatalogue = new List<Question>();
+
+
         static void Main(string[] args)
         {
-
-            createDefaultQuestions();
-            startGame();
+            CreateDefaultQuestion();
+            StartGame();
         }
-
-        static void createDefaultQuestions()
+        public static void StartGame()
         {
-
-        }
-
-
-        static void startGame()
-        {
-            isQuizGameRunning = true;
+            isGameRunning = true;
             Console.WriteLine("Willkommen");
-
             do
             {
-                Console.WriteLine();
-                Console.Write("Momentaner Punktestand: " + points + " " + "Versuchte Fragen: " + attemptedQuestions);
-                if (attemptedQuestions != 0)
-                    Console.Write("(" + ((float)points / (float)attemptedQuestions) * 100 + "%)");
-                Console.WriteLine();
-                Console.WriteLine("Wollen sie: ");
-                Console.WriteLine("Eine Frage beantworten (1)");
-                Console.WriteLine("Eine Frage eintragen (2)");
-                Console.WriteLine("Das Quiz beenden (3)");
+                Console.WriteLine("Punkte: " + Points);
+                Console.WriteLine("Beantwortete Fragen: " + attemptedQuestions);
+                Console.WriteLine("Welche Option:");
+                Console.WriteLine("1) Frage eintragen");
+                Console.WriteLine("2) Frage beantworten");
+                Console.WriteLine("3) Beenden");
 
+                string Option = Console.ReadLine();
 
-                int decision = Int32.Parse(Console.ReadLine());
-
-                switch (decision)
+                if (Option == "1")
                 {
-                    case 1:
-                        askQuestion();
-                        break;
-                    case 2:
-                        insertQuestion();
-                        break;
-                    case 3:
-                        isQuizGameRunning = false;
-                        Console.WriteLine("Thanks for playing.");
-                        Console.WriteLine();
-                        Console.WriteLine();
-                        break;
-                    default:
-                        Console.WriteLine("Unbekannte Antwort, bitte wiederholen");
-                        break;
+                    InsertQuestion();
                 }
-            } while (isQuizGameRunning);
-
-        }
-
-
-        public static void askQuestion()
-        {
-            attemptedQuestions++;
-            Random r = new Random();
-            int randomQIntdex = r.Next(questionCatalogue.Count);
-            Question randomQuestiontoAsk = questionCatalogue[randomQIntdex]();
-            Question.showQuestion;
-
-            if (randomQuestiontoAsk.Questiontype == MultipleChoiceQ || randomQuestiontoAsk.Questiontype == MultipleAnswersQ)
-            {
-                int i = 0;
-                while (i < Answerlist.Count)
+                else if (Option == "2")
                 {
-                    Answer answer = Answer[i];
-                    Console.WriteLine(answer.Answertext);
-                    i++;
+                    AskQuestion();
+
                 }
-
-                while (i > Answerlist.Count)
+                else if (Option == "3")
                 {
-                    var response = Console.ReadLine;
-                    if (randomQuestiontoAsk.checkAnswer(response))
-                    {
-                        addPoints();
-                        Console.WriteLine("Correct");
-                    }
-                    else
-                    {
-                        Console.WriteLine("falsch");
-                    }
+                    Console.WriteLine("Bye");
                     break;
                 }
 
-            }
-            else if (randomQuestiontoAsk.Questiontype == YN || randomQuestiontoAsk.Questiontype == EstimationQuestion || randomQuestiontoAsk.Questiontype == WrtingQ)
+            }while (isGameRunning);
+        }
+
+        public static void CreateDefaultQuestion()
+        {
+            questionCatalogue.Add(new MultipleAnswers("If you pick an answer to this question at random, what is the chance that you will be correct?", new List<AnswerClass>{
+                new AnswerClass("Can't be answered because we don't know how many questions are correct", false),
+                new AnswerClass("It's 50%, either it is correct or it is not", true),
+                new AnswerClass("It's obviously 25%", false),
+                new AnswerClass("It's 100% if I believe in myself", true),
+            }));
+            questionCatalogue.Add(new Single("Who is the worlds smartest programmer?", new List<AnswerClass>{
+                new AnswerClass("Terry Davis", true),
+                new AnswerClass("Linus Torwalds", false),
+                new AnswerClass("James Gosling", false),
+                new AnswerClass("Bjarne Stroustrup", false)
+            }));
+            questionCatalogue.Add(new EstimationQuestion("What is the square root of 676", 26));
+            questionCatalogue.Add(new YesNoQ("Can 1 trillion lions win against the sun if they attack at night?", true));
+            questionCatalogue.Add(new Free("Who is currently the best president of the united states?", "Donald Trump"));
+        }
+        public static void AskQuestion()
+        {
+            attemptedQuestions++;
+            Random r = new Random();
+            int randomQIndex = r.Next(questionCatalogue.Count);
+            Question randomQuestionToAsk = questionCatalogue[randomQIndex];
+
+            randomQuestionToAsk.Show();
+            Console.WriteLine(randomQuestionToAsk.callToAction);
+            string userAnswer = Console.ReadLine();
+            if (randomQuestionToAsk.checkAnswer(userAnswer))
             {
-                var Useranswer = Console.ReadLine();
-                if (randomQuestiontoAsk.checkAnswer(Useranswer))
+                Points++;
+                Console.WriteLine("Correct");
+            }
+            else
+            {
+                Console.WriteLine("Falsch");
+            }
+
+        }
+        public static void InsertQuestion()
+        {
+            Console.WriteLine("Please insert your question");
+            string userQuestion = Console.ReadLine();
+
+            Console.Write("Type the number corresponding to the question type you want to add. \n" +
+            "1: freetext question \n" +
+            "2: yes/no question \n" +
+            "3: guess question \n" +
+            "4: multiple answer question \n" +
+            "5: single answer question \n");
+            string questionType = Console.ReadLine();
+
+            switch (questionType)
+            {
+                case "1":
+                    questionCatalogue.Add(AddFreeTextQuestion(userQuestion));
+                    break;
+                case "2":
+                    questionCatalogue.Add(AddBinaryQuestion(userQuestion));
+                    break;
+                case "3":
+                    questionCatalogue.Add(AddGuessQuestion(userQuestion));
+                    break;
+                case "4":
+                    questionCatalogue.Add(AddMultiQuestion(userQuestion));
+                    break;
+                case "5":
+                    questionCatalogue.Add(AddSingleQuestion(userQuestion));
+                    break;
+                default:
+                    Console.WriteLine("Your input was not valid.");
+                    break;
+            }
+            Console.WriteLine("Your question was successfully added.");
+        }
+
+        public static Question AddFreeTextQuestion(string Questiontext)
+        {
+            Console.WriteLine("Please insert the correct answer");
+            return new Free(Questiontext, Console.ReadLine());
+        }
+        public static Question AddBinaryQuestion(string Questiontext)
+        {
+            Console.WriteLine("Type y if your question is correct and n if it is not");
+            string input = Console.ReadLine();
+            bool isCorrect = false;
+            if (input == "y")
+            {
+                isCorrect = true;
+            }
+            return new YesNoQ(Questiontext, isCorrect);
+        }
+        public static Question AddGuessQuestion(string Questiontext)
+        {
+            Console.WriteLine("Please insert the correct number");
+            int number = Int32.Parse(Console.ReadLine());
+            return new EstimationQuestion(Questiontext, number);
+        }
+        public static Question AddMultiQuestion(string Questiontext)
+        {
+            Console.WriteLine("How many possible answers do you want?");
+            int howManyAnswers = Int32.Parse(Console.ReadLine());
+            List<AnswerClass> userAnswers = new List<AnswerClass>();
+            AnswerClass userAnswer = new AnswerClass();
+            bool isCorrect;
+            string text;
+            for (int i = 0; i < howManyAnswers; i++)
+            {
+                Console.WriteLine("Please insert an answer");
+                text = Console.ReadLine();
+                Console.WriteLine("Type y if that answer is correct and n if it is not");
+                if (Console.ReadLine() == "y")
                 {
-                    addPoints();
-                    Console.WriteLine("Correct");
+                    isCorrect = true;
                 }
                 else
                 {
-                    Console.WriteLine("falsch");
+                    isCorrect = false;
                 }
+                userAnswers.Add(new AnswerClass(text, isCorrect));
             }
-
+            return new MultipleAnswers(Questiontext, userAnswers);
         }
-
-
-        public static void addPoints()
+        public static Question AddSingleQuestion(string Questiontext)
         {
-            points = +1;
+            Console.WriteLine("How many possible answers do you want?");
+            int howManyAnswers = Int32.Parse(Console.ReadLine());
+            List<AnswerClass> userAnswers = new List<AnswerClass>();
 
+            Console.WriteLine("Please insert the correct answer");
+            userAnswers.Add(new AnswerClass(Console.ReadLine(), true));
+
+            for (int i = 0; i < howManyAnswers; i++)
+            {
+                Console.WriteLine("Please insert an answer");
+                userAnswers.Add(new AnswerClass(Console.ReadLine(), false));
+            }
+            return new Single(Questiontext, userAnswers);
         }
-        public static void insertQuestion()
-        {
-
-
-        }
-
 
     }
 
 
 
-    public class Question
+    abstract class Question
     {
         public string Questiontext;
-        public Enum Questiontype;
-        //IOClass inputoutput;
+        public string callToAction;
 
+        public abstract void Show();
 
-        public Question(string Questiontext, Enum Questiontype)
+        public abstract bool checkAnswer(string input);
+
+    }
+    class MultipleAnswers : Question
+    {
+        public MultipleAnswers(string Questiontext, List<AnswerClass> answers)
         {
-            this.QuestionText = QuestionText;
-            this.Questiontype = Questiontype;
+            this.Questiontext = Questiontext;
+            this.answers = answers;
+            this.callToAction = "Bitte die Zahlen der eingeben. Mit Leerzeichen!(z.B.:2 3) ";
+        }
+        List<AnswerClass> answers;
+        public override void Show()
+        {
+            Console.WriteLine(Questiontext);
+
+            for (int i = 0; i < answers.Count; i++)
+            {
+                Console.WriteLine(i + ": " + answers[i].text);
+            }
         }
 
-        public bool checkAnswer()
+        public override bool checkAnswer(string response)
         {
+            string[] splittedInput = response.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+            bool[] inputForEveryAnswer = new bool[answers.Count];
+
+            for (int i = 0; i < answers.Count; i++)
+            {
+                inputForEveryAnswer[i] = false;
+                for (int j = 0; j < splittedInput.Length; j++)
+                {
+                    if (splittedInput[j] == i.ToString())
+                    {
+                        inputForEveryAnswer[i] = true;
+                    }
+                }
+                if (inputForEveryAnswer[i] != answers[i].isCorrect)
+                {
+                    return false;
+                }
+            }
             return true;
         }
-        public void showQuestion()
-        {
-            Console.WriteLine("Frage: " + QuestionText);
-        }
-    }
-    public class MultipleChoiceQ : Question
-    {
-
-        static List<Answer> Answers;
-
-        public MultipleChoiceQ()
-        {
-            Answers = new List<Answer>();
-        }
-        public bool checkAnswer(int response)
-        {
-            bool result;
-            if (Answers[response].isCorrect)
-                result = true;
-
-            else
-                result = false;
-            return result;
-        }
     }
 
 
-    public class YesNoQ : Question
+    class YesNoQ : Question
     {
-        public bool YesOrNo;
-
-        public YesNoQ(bool YesNoQ)
+        public YesNoQ(string Questiontext, bool isCorrect)
         {
-            this.YesOrNo = YesOrNo;
+            this.Questiontext = Questiontext;
+            this.isCorrect = isCorrect;
+            this.callToAction = "Bitte y oder n eingeben";
         }
-        public bool checkAnswer(string response)
+        public bool isCorrect;
+
+        public override void Show()
         {
-            bool result;
-            bool yorn;
+            Console.WriteLine(Questiontext);
+        }
 
-            if (response == "n")
-            { yorn = false; }
+        public override bool checkAnswer(string response)
+        {
+            bool yorn = false;
+            if (response == "y")
+            {
+                yorn = true;
+            }
 
-            else if (response == "y")
-            { yorn = true; }
-
-            if (isCorrect != yorn)
-            { result = false; }
-            else if (isCorrect == yorn)
-            { result = true; }
-
-            return result;
+            if (isCorrect == yorn)
+            {
+                return true;
+            }
+            return false;
         }
     }
-    public class EstimationQuestion : Question
+    class EstimationQuestion : Question
     {
-        public int valueToEstimate;
-
-
-        public EstimationQuestion(int valueToEstimate)
+        public EstimationQuestion(string Questiontext, int answertext)
         {
-            this.valueToEstimate = valueToEstimate;
+            this.Questiontext = Questiontext;
+            this.answertext = answertext;
+            this.callToAction = "Schätze die Richte Zahl";
         }
-        public bool checkAnswer(int response)
+
+        public int answertext;
+        public override void Show()
         {
-            bool result;
-            int.TryParse(Answertext);
-            return true;
+            Console.WriteLine(Questiontext);
+        }
 
-            if (response < Answertext - 50 && response > Answertext + 50)
-            { result = false; }
-            else if (response > Answertext - 50 && response < Answertext + 50)
-            { result = true; }
-            return result;
+        public override bool checkAnswer(string response)
+        {
+            int responseN = Int32.Parse(response);
 
+            if (responseN > answertext - 50 && responseN < answertext + 50)
+            {
+                return true;
+            }
+            return false;
+        }
+
+    }
+    class Single : Question
+    {
+        public Single(string Questiontext, List<AnswerClass> answers)
+        {
+            this.Questiontext = Questiontext;
+            this.callToAction = "Type the number corresponding to the correct answer";
+            this.answers = answers;
+        }
+        public List<AnswerClass> answers;
+        public override void Show()
+        {
+            Console.WriteLine(Questiontext);
+
+            for (int i = 0; i < answers.Count; i++)
+            {
+                Console.WriteLine(i + ": " + answers[i].text);
+            }
+        }
+        public override bool checkAnswer(string input)
+        {
+            int inputNumber = Int32.Parse(input);
+            for (int i = 0; i < answers.Count; i++)
+            {
+                if (answers[i].isCorrect && i == inputNumber)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+    }
+    class Free : Question
+    {
+        public Free(string Questiontext, string answerWord)
+        {
+            this.Questiontext = Questiontext;
+            this.answerWord = answerWord;
+            this.callToAction = "Type the correct word!";
+        }
+        public string answerWord;
+        public override void Show()
+        {
+            Console.WriteLine(Questiontext);
+        }
+
+        public override bool checkAnswer(string input)
+        {
+            if (input.ToUpper() == answerWord.ToUpper())
+            {
+                return true;
+            }
+            return false;
         }
     }
-    public class MultipleAnswersQ : Question
+    public class AnswerClass
     {
-        static List<Answer> Answers;
-
-        public MultipleAnswersQ()
+        public AnswerClass() { }
+        public AnswerClass(string text, bool isCorrect)
         {
-            Answers = new List<Answer>();
-        }
-        public bool checkAnswer(int response)
-        {
-            bool result;
-            if (Answers[response].isCorrect)
-                result = true;
-
-            else
-                result = false;
-            return result;
-        }
-    }
-    public class WrtingQ : Question
-    {
-        public String WordToWrite;
-        public WrtingQ(String WordToWrite)
-        {
-            this.WordToWrite = WordToWrite;
+            this.text = text;
+            this.isCorrect = isCorrect;
         }
 
-        public bool checkAnswer(string response)
-        {
-            bool result;
-            if (response != Answertext)
-                result = false;
-
-            else if (response = Answertext)
-                result = true;
-
-            return result;
-        }
-    }
-    public class Answer
-    {
-        public string Answertext;
-        public Answer(String Answertext)
-        {
-            this.Answertext = Answertext;
-        }
-        public bool isCorrect()
-        {
-            return true;
-        }
+        public string text;
+        public bool isCorrect;
     }
 
 
