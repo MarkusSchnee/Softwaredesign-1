@@ -52,21 +52,22 @@ namespace Aufgabe08
 
         public static void CreateDefaultQuestion()
         {
-            questionCatalogue.Add(new MultipleAnswers("If you pick an answer to this question at random, what is the chance that you will be correct?", new List<AnswerClass>{
-                new AnswerClass("Can't be answered because we don't know how many questions are correct", false),
-                new AnswerClass("It's 50%, either it is correct or it is not", true),
-                new AnswerClass("It's obviously 25%", false),
-                new AnswerClass("It's 100% if I believe in myself", true),
+            questionCatalogue.Add(new MultipleAnswers("Was ist alles ein Säugetier?", new List<AnswerClass>{
+                new AnswerClass("Wal", true),
+                new AnswerClass("Delphin", true),
+                new AnswerClass("Spinne", false),
+                new AnswerClass("Kuh", true),
             }));
-            questionCatalogue.Add(new Single("Who is the worlds smartest programmer?", new List<AnswerClass>{
-                new AnswerClass("Terry Davis", true),
-                new AnswerClass("Linus Torwalds", false),
-                new AnswerClass("James Gosling", false),
-                new AnswerClass("Bjarne Stroustrup", false)
+            questionCatalogue.Add(new MultipleChoiceQ("Wie heißt das Tierwesen(aus Phantastische Tierwesen), welches verrückt nach allem ist was glänzt?", new List<AnswerClass>{
+                new AnswerClass("Niffler", true),
+                new AnswerClass("Uli Hoeneß", false),
+                new AnswerClass("Donnervogel", false),
+                new AnswerClass("Phoenix", false)
             }));
-            questionCatalogue.Add(new EstimationQuestion("What is the square root of 676", 26));
-            questionCatalogue.Add(new YesNoQ("Can 1 trillion lions win against the sun if they attack at night?", true));
-            questionCatalogue.Add(new Free("Who is currently the best president of the united states?", "Donald Trump"));
+            questionCatalogue.Add(new EstimationQuestion("Wie viele Einkerbungen hat ein Golfball", 336));
+            questionCatalogue.Add(new YesNoQ("Waren die Menschen auf dem Mond", true));
+            questionCatalogue.Add(new WritingQ("Wer ist ohne jeden Zweifel die allerwichtigste Person in Vault 101, der Eine, der uns von den grausamen Bedingungen der Atomwüste schützt, dem wir alles, sogar unser Leben, verdanken?", "Der Aufseher"));
+            questionCatalogue.Add(new WritingQ("Was hat 4 Beine und kann nicht laufen?", "Tisch"));
         }
         public static void AskQuestion()
         {
@@ -129,7 +130,7 @@ namespace Aufgabe08
         public static Question AddFreeTextQuestion(string Questiontext)
         {
             Console.WriteLine("Please insert the correct answer");
-            return new Free(Questiontext, Console.ReadLine());
+            return new WritingQ(Questiontext, Console.ReadLine());
         }
         public static Question AddBinaryQuestion(string Questiontext)
         {
@@ -187,7 +188,7 @@ namespace Aufgabe08
                 Console.WriteLine("Please insert an answer");
                 userAnswers.Add(new AnswerClass(Console.ReadLine(), false));
             }
-            return new Single(Questiontext, userAnswers);
+            return new MultipleChoiceQ(Questiontext, userAnswers);
         }
 
     }
@@ -305,12 +306,12 @@ namespace Aufgabe08
         }
 
     }
-    class Single : Question
+    class MultipleChoiceQ : Question
     {
-        public Single(string Questiontext, List<AnswerClass> answers)
+        public MultipleChoiceQ(string Questiontext, List<AnswerClass> answers)
         {
             this.Questiontext = Questiontext;
-            this.callToAction = "Type the number corresponding to the correct answer";
+            this.callToAction = "Bitte die Nummer für die Antwort eingeben";
             this.answers = answers;
         }
         public List<AnswerClass> answers;
@@ -323,12 +324,12 @@ namespace Aufgabe08
                 Console.WriteLine(i + ": " + answers[i].text);
             }
         }
-        public override bool checkAnswer(string input)
+        public override bool checkAnswer(string response)
         {
-            int inputNumber = Int32.Parse(input);
+            int responseN = Int32.Parse(response);
             for (int i = 0; i < answers.Count; i++)
             {
-                if (answers[i].isCorrect && i == inputNumber)
+                if (answers[i].isCorrect && i == responseN)
                 {
                     return true;
                 }
@@ -337,23 +338,23 @@ namespace Aufgabe08
         }
 
     }
-    class Free : Question
+    class WritingQ : Question
     {
-        public Free(string Questiontext, string answerWord)
+        public WritingQ(string Questiontext, string WordToWrite)
         {
             this.Questiontext = Questiontext;
-            this.answerWord = answerWord;
+            this.WordToWrite = WordToWrite;
             this.callToAction = "Type the correct word!";
         }
-        public string answerWord;
+        public string WordToWrite;
         public override void Show()
         {
             Console.WriteLine(Questiontext);
         }
 
-        public override bool checkAnswer(string input)
+        public override bool checkAnswer(string response)
         {
-            if (input.ToUpper() == answerWord.ToUpper())
+            if (response.ToUpper() == WordToWrite.ToUpper())
             {
                 return true;
             }
