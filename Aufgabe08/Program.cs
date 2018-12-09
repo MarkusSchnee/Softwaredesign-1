@@ -95,13 +95,13 @@ namespace Aufgabe08
         {
             Console.WriteLine("Bitte Frage eingeben!");
             string Questiontext = Console.ReadLine();
+            Console.WriteLine("Um was für ein Fragentyp handelt es sich?");
+            Console.WriteLine("1) Text eingeben");
+            Console.WriteLine("2) Ja oder Nein Frage");
+            Console.WriteLine("3) Schätzfrage");
+            Console.WriteLine("4) Frage mit mehreren richigen Anwtorten");
+            Console.WriteLine("5) Frage mit einer richtigen Anwtort");
 
-            Console.Write("Um was für ein Fragentyp handelt es sich?. \n" +
-            "1: Text eingeben \n" +
-            "2: Ja oder Nein Frage \n" +
-            "3: Schätzfrage \n" +
-            "4: Frage mit mehreren richigen Anwtorten \n" +
-            "5: Frage mit einer richtigen Anwtort \n");
             string Type = Console.ReadLine();
 
             switch (Type)
