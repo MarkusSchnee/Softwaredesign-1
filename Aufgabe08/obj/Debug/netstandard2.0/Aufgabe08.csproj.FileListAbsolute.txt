@@ -1,0 +1,9 @@
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\bin\Debug\netstandard2.0\Aufgabe08.deps.json
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\bin\Debug\netstandard2.0\Aufgabe08.dll
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\bin\Debug\netstandard2.0\Aufgabe08.pdb
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\obj\Debug\netstandard2.0\Aufgabe08.csprojAssemblyReference.cache
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\obj\Debug\netstandard2.0\Aufgabe08.csproj.CoreCompileInputs.cache
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\obj\Debug\netstandard2.0\Aufgabe08.AssemblyInfoInputs.cache
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\obj\Debug\netstandard2.0\Aufgabe08.AssemblyInfo.cs
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\obj\Debug\netstandard2.0\Aufgabe08.dll
+C:\Users\Chrisi\Desktop\git\Softwaredesign\Aufgabe08\obj\Debug\netstandard2.0\Aufgabe08.pdb
