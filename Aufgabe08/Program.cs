@@ -204,20 +204,19 @@ namespace Aufgabe08
 
         public override bool checkAnswer(string response)
         {
-            string[] splittedInput = response.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-            bool[] inputForEveryAnswer = new bool[answers.Count];
-
+            string[] responseSplitt = response.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+            bool[] inputAnswer = new bool[answers.Count];
             for (int i = 0; i < answers.Count; i++)
             {
-                inputForEveryAnswer[i] = false;
-                for (int j = 0; j < splittedInput.Length; j++)
+                inputAnswer[i] = false;
+                for (int j = 0; j < responseSplitt.Length; j++)
                 {
-                    if (splittedInput[j] == i.ToString())
+                    if (responseSplitt[j] == i.ToString())
                     {
-                        inputForEveryAnswer[i] = true;
+                        inputAnswer[i] = true;
                     }
                 }
-                if (inputForEveryAnswer[i] != answers[i].isCorrect)
+                if (inputAnswer[i] != answers[i].isCorrect)
                 {
                     return false;
                 }
