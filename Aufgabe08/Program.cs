@@ -55,7 +55,7 @@ namespace Aufgabe08
         {
             attemptedQuestions++;
             Random r = new Random();
-            int randomQIndex = r.Next(questionCatalogue.Count);
+            int randomQIndex = r.Next(questionCatalogue.Count);     // --> randomQuestionIndex
             Question randomQuestionToAsk = questionCatalogue[randomQIndex];
 
             randomQuestionToAsk.Show();
@@ -205,9 +205,9 @@ namespace Aufgabe08
 
     }
 
-
-   
-
+// Guter Code, Methoden,Variablen und Klassennamen weise gewählt! 
+// Methode InsertQuestions() ist etwas groß.
+// Sonst nichts mehr gefunden.
 
 }
 
